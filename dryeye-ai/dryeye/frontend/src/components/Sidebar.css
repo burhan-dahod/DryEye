@@ -1,0 +1,28 @@
+/* Sidebar.css */
+.Sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.Sidebar h2 {
+    margin-top: 0;
+}
+
+.Sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.Sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Sidebar nav ul li a:hover {
+    text-decoration: underline;
+}

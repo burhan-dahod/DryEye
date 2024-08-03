@@ -1,0 +1,54 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.App-content {
+  margin-left: 250px;
+  /* Width of the sidebar */
+  padding: 20px;
+  flex: 1;
+  /* Take the remaining space */
+}
+
+.App-content main {
+  padding: 20px;
+}
+
+.App-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.Sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+}
+
+.Sidebar h2 {
+  margin-top: 0;
+}
+
+.Sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.Sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.Sidebar nav ul li a:hover {
+  text-decoration: underline;
+}

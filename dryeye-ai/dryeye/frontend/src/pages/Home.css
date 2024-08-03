@@ -1,0 +1,39 @@
+.Home {
+  text-align: center;
+}
+
+.Hero-section {
+  margin: 20px;
+}
+
+.Home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Home-button:hover {
+  background-color: #0056b3;
+}
+
+.Features-section {
+  margin: 20px;
+  text-align: left;
+}
+
+.Features-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Features-section li {
+  background-color: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
