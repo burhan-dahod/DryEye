@@ -1,14 +1,30 @@
 from rest_framework.decorators import api_view
 from django.http import JsonResponse
-from .ml_models.model import predict
-
+from .ml_models.model import predict_drought
+import json
 @api_view(['POST'])
 def predict_view(request):
-    station_id = request.data.get('station_id')
-    if station_id is not None:
-        print(station_id)
-        features = [station_id]  # Prepare features as needed
-        prediction = predict(features)
-        return JsonResponse({'prediction': prediction.tolist()})
+    date_str = str(request.data.get('date_id'))
+    print(date_str)
+    if date_str:
+        print(date_str)
+        prediction = predict_drought(date_str)
+        print(prediction)
+        # Return the prediction as a JSON response
+        return JsonResponse(json.loads(prediction), safe=False)
     else:
-        return JsonResponse({'error': 'Invalid station ID'}, status=400)
+        return JsonResponse({'error': 'Invalid date'}, status=400)
+
+@csrf_exempt
+def save_pin(request):
+    if request.method == 'POST':
+        pin_data = json.loads(request.body)
+        x = pin_data.get('x')
+        y = pin_data.get('y')
+        
+        # Call the gradient.py script
+        gradient_val = get_rgb(x,y)
+
+        return JsonResponse({'status': 'success', 'gradient': gradient_val})
+
+    return JsonResponse({'status': 'error'}, status=400)

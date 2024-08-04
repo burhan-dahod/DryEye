@@ -4,15 +4,15 @@ import axios from "axios";
 const AutomaticPrediction = () => {
   const [weatherStations, setWeatherStations] = useState([]);
   const [selectedStation, setSelectedStation] = useState("");
+  const [dateInput, setDateInput] = useState(""); // State to hold the date input
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch weather stations from an API or define them here
     const fetchWeatherStations = async () => {
       try {
         const stations = [
-          { id: 1, name: "Station 1" },
+          { id: 1, name: "Salt Lake City (ID: 423929)" },
           { id: 2, name: "Station 2" },
           { id: 3, name: "Station 3" },
         ];
@@ -28,22 +28,28 @@ const AutomaticPrediction = () => {
   const handleStationChange = async (event) => {
     const stationId = event.target.value;
     setSelectedStation(stationId);
+  };
 
-    if (stationId) {
+  const handleDateChange = (event) => {
+    setDateInput(event.target.value);
+  };
+
+  const fetchPrediction = async () => {
+    if (selectedStation && dateInput) {
       try {
         const response = await axios.post("/api/predict/", {
-          //   station_id: stationId,
-          station_id: "2012-11-01",
+          date_id: dateInput,
         });
-        setPrediction(response.data.prediction);
+        console.log(response.data); // Log full response
+        setPrediction(response.data); // Set full response
         setError(null); // Clear any previous errors
       } catch (error) {
-          console.error("Error fetching prediction:", error);
-          setError("Failed to fetch prediction. Please try again.");
+        console.error("Error fetching prediction:", error);
+        setError("Failed to fetch prediction. Please try again.");
         setPrediction(null); // Clear previous prediction
       }
     } else {
-      setPrediction(null); // Clear prediction if no station is selected
+      setError("Please select a station and enter a date.");
     }
   };
 
@@ -58,10 +64,22 @@ const AutomaticPrediction = () => {
           </option>
         ))}
       </select>
-      {prediction !== null && (
+      <div>
+        <label htmlFor="dateInput">Enter Date (YYYY-MM-DD):</label>
+        <input
+          type="text"
+          id="dateInput"
+          value={dateInput}
+          onChange={handleDateChange}
+          placeholder="YYYY-MM-DD"
+        />
+        <button onClick={fetchPrediction}>Get Prediction</button>
+      </div>
+      {prediction && (
         <div>
           <h2>Prediction</h2>
-          <p>{prediction}</p>
+          <p>Drought Status: {prediction.drought_status}</p>
+          {prediction.drought_duration && <p>Drought Duration: {prediction.drought_duration}</p>}
         </div>
       )}
       {error && (
