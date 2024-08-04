@@ -1,39 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Timmana:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 .Sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #333;
-    color: white;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+    border-radius: 15px;
+    background-color: #7279bb;
 }
 
-.Sidebar-title {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    text-align: center;
+.Sidebar.open {
+    transform: translateX(0);
 }
 
-nav ul {
-    list-style-type: none;
+.Sidebar-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
     padding: 0;
 }
 
+.Sidebar-toggle-lines {
+    width: 30px;
+    height: 3px;
+    background-color: #cacaca;
+    margin: 6px 0;
+    transition: background-color 0.3s ease;
+}
+
+.Sidebar-toggle:hover .Sidebar-toggle-lines {
+    background-color: #575c88;
+}
+
+.Sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Sidebar-logo {
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.Sidebar-title {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-family: 'Timmana', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 nav ul li {
-    margin: 15px 0;
+    margin: 0;
 }
 
-nav ul li a {
-    color: white;
+.Sidebar-link {
     text-decoration: none;
-    font-size: 1.2em;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
-nav ul li a:hover {
-    background-color: #575757;
+.Sidebar-link i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #ffffff;
+}
+
+.Sidebar-link:hover {
+    background-color: #f0f0f0de;
+    color: #3a3d57;
+    font-weight: bold;
+}
+
+.Sidebar-link:hover i {
+    color: #3a3d57;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Subsection from "../components/Subsection";
 import "./Home.css";
+import logo from '../components/logo.png';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,18 +13,20 @@ const Home = () => {
 
   return (
     <div className="Home">
+
       <div className="Hero-section">
-        <h2>Welcome to DryEye AI</h2>
-        <p>
-          Our AI-powered tool provides accurate drought predictions to help
-          governments and communities prepare and respond effectively.
-        </p>
-        <button
-          onClick={() => handleNavigate("/prediction")}
-          className="Home-button"
-        >
-          Try Now
-        </button>
+        <div className="Hero-content">
+          <img src={logo} alt="DryEye AI Logo" className="Hero-logo" />
+
+          <h3>Welcome to,</h3>
+          <h1>DryEye AI</h1>
+
+          <p>
+            Our AI-powered tool provides accurate drought predictions to help
+            governments and communities prepare and respond effectively.
+          </p>
+
+        </div>
       </div>
 
       <Subsection subtitle="Our Mission" className="Mission">
@@ -59,12 +62,12 @@ const Home = () => {
       <Subsection subtitle={"Drought Prediction"} className="Prediction">
         <div className="Prediction-options">
           <div className="Prediction-option">
-            <h3>Manual Prediction</h3>
+            <h3>Prediction Now!</h3>
             <p>
               Enter specific parameters to manually predict drought conditions in your area.
             </p>
             <button onClick={() => handleNavigate('/manual')} className="Home-button">
-              Manual Prediction
+              Try Now!
             </button>
           </div>
           <div className="Prediction-option">
@@ -77,7 +80,7 @@ const Home = () => {
               onClick={() => handleNavigate("/automatic-prediction")}
               className="Home-button"
             >
-              Automatic Prediction
+              Try Now!
             </button>
           </div>
         </div>
@@ -91,11 +94,12 @@ const Home = () => {
           measures to manage drought conditions effectively.
         </p>
         <button
-          onClick={() => handleNavigate("/preventative-measures")}
+          onClick={() => window.open('https://smallfarms.oregonstate.edu/smallfarms/15-ways-help-mitigate-drought-your-farm-season-and-beyond', '_blank')}
           className="Home-button"
         >
           Explore Preventative Measures
         </button>
+
       </Subsection>
     </div>
   );

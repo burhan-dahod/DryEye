@@ -1,14 +1,6 @@
-/* General styles for the splash page */
 .StartPage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #4CAF50; /* Green background for a fresh look */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif; /* Make sure this font is imported */
+    padding: 3cqb;
+    font-family: 'Roboto', sans-serif;
 }
 
 .StartPage-content {
@@ -22,23 +14,49 @@
 }
 
 .StartPage-description {
-    font-size: 1.2em;
+    font-size: 1.25rem;
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .StartPage-button {
-    background-color: #ffffff; /* White button for contrast */
-    color: #4CAF50; /* Match button color with background */
+    background-color: #6c74f0;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 15px 80px;
     font-size: 1.2em;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s, transform 0.3s;
 }
 
 .StartPage-button:hover {
-    background-color: #f1f1f1; /* Lighten button color on hover */
+    background-color: #787ed8;
+    color: #f3f4ff;
     transform: scale(1.05);
+}
+
+.StartPage-logo {
+    max-width: 700px;
+}
+
+.StartPage-features {
+    margin-top: 30px;
+}
+
+.StartPage-features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.StartPage-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.StartPage-features li {
+    font-size: 1.125rem;
+    margin: 10px 0;
 }
