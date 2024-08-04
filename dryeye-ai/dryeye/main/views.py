@@ -1,7 +1,9 @@
 from rest_framework.decorators import api_view
 from django.http import JsonResponse
 from .ml_models.model import predict_drought
+from .ml_models.gradient import get_rgb
 import json
+
 @api_view(['POST'])
 def predict_view(request):
     date_str = str(request.data.get('date_id'))
@@ -15,7 +17,6 @@ def predict_view(request):
     else:
         return JsonResponse({'error': 'Invalid date'}, status=400)
 
-@csrf_exempt
 def save_pin(request):
     if request.method == 'POST':
         pin_data = json.loads(request.body)
