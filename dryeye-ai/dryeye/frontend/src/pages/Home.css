@@ -12,9 +12,11 @@
   background-color: #fafafae1;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+
 }
 
 .Hero-section {
+  font-size: 16px;
   text-align: left;
   margin-bottom: 40px;
 }
@@ -40,7 +42,9 @@
 .Mission-section {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 20px;
   max-width: 800px;
+
   width: 100%;
   padding: 0 20px;
 }
@@ -56,6 +60,7 @@
 
 .Prediction-section {
   text-align: center;
+  font-size: 17px;
 
   margin-bottom: 40px;
   max-width: 1000px;
@@ -73,6 +78,7 @@
 
 .Prediction-option {
   background-color: #ffffff;
+
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -83,12 +89,14 @@
 
 .Prediction-option h3 {
   font-size: 1.8em;
+
   margin-bottom: 10px;
 }
 
 .Prediction-option p {
   margin-bottom: 20px;
   font-size: 1.1em;
+
 }
 
 .Hero-logo {
@@ -99,6 +107,8 @@
 
 .Hero-content h3 {
   margin-bottom: 0;
+  font-size: 20px;
+
   font-weight: 400;
 }
 
@@ -112,4 +122,11 @@
   margin: 20px 0;
   margin-bottom: 10px;
   width: 100%;
+}
+
+.drought-prediction-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }

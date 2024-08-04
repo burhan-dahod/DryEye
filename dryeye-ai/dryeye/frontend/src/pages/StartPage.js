@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StartPage.css';
-import logo from '../components/logo3.png'; // Replace with your image path
+import logo from '../components/logo3.png';
 
 const StartPage = () => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate('/home'); // Redirect to Home page on button click
+        navigate('/home');
     };
 
     return (

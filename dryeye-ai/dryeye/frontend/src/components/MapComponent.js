@@ -19,9 +19,9 @@ const MapComponent = () => {
       },
       body: JSON.stringify({ x: offsetX, y: offsetY }),
     })
-    .then(response => response.json())
-    .then(data => setGradientResult(data.gradient))
-    .catch(error => console.error('Error:', error));
+      .then(response => response.json())
+      .then(data => setGradientResult(data.gradient))
+      .catch(error => console.error('Error:', error));
   };
 
   return (

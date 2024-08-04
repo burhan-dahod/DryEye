@@ -61,7 +61,8 @@ const Home = () => {
       </Subsection>
       <div className="separator"></div>
 
-      <Subsection subtitle={"Drought Prediction"} className="Prediction">
+      <Subsection subtitle={""} className="Prediction">
+        <h2 className="drought-prediction-title">Drought Prediction</h2>
         <div className="Prediction-options">
           <div className="Prediction-option">
             <h3>Manual Prediction</h3>
@@ -87,6 +88,8 @@ const Home = () => {
           </div>
         </div>
       </Subsection>
+
+
       <Subsection
         subtitle="Learn More About Preventative Measures"
         className="Preventative-measures"

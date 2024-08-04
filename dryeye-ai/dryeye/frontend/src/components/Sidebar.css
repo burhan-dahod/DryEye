@@ -34,13 +34,13 @@
 .Sidebar-toggle-lines {
     width: 30px;
     height: 3px;
-    background-color: #cacaca;
-    margin: 6px 0;
+    background-color: #292929;
+    margin: 7px 0;
     transition: background-color 0.3s ease;
 }
 
 .Sidebar-toggle:hover .Sidebar-toggle-lines {
-    background-color: #575c88;
+    background-color: #7f83aa;
 }
 
 .Sidebar-header {
