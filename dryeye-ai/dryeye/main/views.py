@@ -1,8 +1,12 @@
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from .ml_models.auto_pred import predict
+from .ml_models.model import predict
+
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
 
 @api_view(['POST'])
+@csrf_exempt  # Use with caution, only if you need to exempt this view from CSRF checks
 def predict_view(request):
     # Get the data from the request
     station_id = request.data.get('station_id')
