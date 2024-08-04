@@ -1,0 +1,11 @@
+.map-container {
+    position: relative;
+    width: fit-content;
+  }
+  
+  .pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    font-size: 24px;
+  }
+  

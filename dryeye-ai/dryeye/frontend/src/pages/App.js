@@ -5,6 +5,7 @@ import StartPage from "./StartPage";
 import Home from "./Home";
 import AutomaticPrediction from "./AutomaticPrediction";
 import ManualPage from './ManualPage';
+import MapComponent from "../components/MapComponent";
 
 import "./App.css";
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<StartPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/manual" element={<ManualPage />} /> {/* Add route for ManualPage */}
+            <Route path="/map" element={<MapComponent />} /> {/* Add route for ManualPage */}
             <Route
               path="/automatic-prediction"
               element={<AutomaticPrediction />}

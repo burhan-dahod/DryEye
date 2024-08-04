@@ -1,14 +1,31 @@
 body {
-    background-color: #f4f7fa;
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f7fa;
+    background-image: url('../../public/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
 
 .manual-page {
     width: 100%;
     max-width: 700px;
-    margin: 30px 250px;
+    margin: 30px 350px;
     padding: 30px;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -127,12 +144,9 @@ body {
     border-bottom: none;
 }
 
-/* Spinner Styles */
 .spinner {
     border: 8px solid #f3f3f3;
-    /* Light grey */
     border-top: 8px solid #6c74f0;
-    /* Blue */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -140,7 +154,6 @@ body {
     margin: 20px auto;
 }
 
-/* Spinner Animation */
 @keyframes spin {
     0% {
         transform: rotate(0deg);

@@ -25,46 +25,49 @@ const Home = () => {
             Our AI-powered tool provides accurate drought predictions to help
             governments and communities prepare and respond effectively.
           </p>
+          <div className="separator"></div>
 
         </div>
       </div>
 
       <Subsection subtitle="Our Mission" className="Mission">
         <p>
-          Marginalized agricultural workers, who form the backbone of our food
-          system, are among the most affected by climate change. These
-          individuals often work with limited resources, making any setback,
-          like a drought, a significant challenge to their capabilities, output,
-          and income. Despite their crucial role, their plight is often
-          overlooked, especially during times of difficulty.
-        </p>
-        <p>
-          To address this issue, we developed DryEye AI. Our tool predicts and
-          analyzes drought periods using historical data to provide accurate
-          forecasts. It can predict the onset and duration of droughts, and our
-          computer vision model can help detect early signs of droughts in your
-          area.
-        </p>
-        <p>
-          This initiative aims to bring attention to these critical issues and
-          support farmers in conducting climate smart agriculture, which helps
-          reduce the impact of such incidents.
-        </p>
-        <p>
-          Climate smart agriculture involves practices that increase
-          productivity while reducing greenhouse gas emissions and enhancing
-          resilience to climate change. DryEye AI contributes by offering
-          insights that help farmers make informed decisions to mitigate the
-          effects of drought.
-        </p>
-      </Subsection>
+          At DryEye AI, we aim to support marginalized agricultural workers affected by climate change.
+          Farmers, many of whom operate with limited resources, face substantial challenges as climate conditions worsen.
+          These individuals are crucial to our food systems yet often suffer the most from environmental crises while receiving minimal support.
 
-      <Subsection subtitle={"Drought Prediction"} className="Prediction">
+        </p>
+        <p>
+          According to recent studies, over 80% of small-scale farmers struggle
+          with the financial effects of climate-induced droughts. This makes it crucial
+          to provide effective tools to reduce these challenges and help farmers.
+        </p>
+        <p>
+          DryEye AI was developed to address this critical need. Our tool leverages
+          historical climate data and advanced computer vision technology to predict and analyze
+          drought conditions specific to your location. By forecasting upcoming droughts,
+          we enable farmers and governments to take assertive measures. Additionally,
+          our system helps identify early signs of drought, offering vital insights to prevent and manage these events before they escalate.
+        </p>
+        <p>
+          Through innovation and support, DryEye AI aims to empower those who are most
+          vulnerable to the impacts of climate change, ensuring that they have the resources
+          and knowledge necessary to thrive despite the growing challenges.
+        </p>
+        <p>-</p>
+        <p>Sincerely,</p>
+        <p>DryEye Team.</p>
+
+      </Subsection>
+      <div className="separator"></div>
+
+      <Subsection subtitle={""} className="Prediction">
+        <h2 className="drought-prediction-title">Drought Prediction</h2>
         <div className="Prediction-options">
           <div className="Prediction-option">
-            <h3>Prediction Now!</h3>
+            <h3>Manual Prediction</h3>
             <p>
-              Enter specific parameters to manually predict drought conditions in your area.
+              Enter specific parameters to manually detect drought conditions.
             </p>
             <button onClick={() => handleNavigate('/manual')} className="Home-button">
               Try Now!
@@ -85,13 +88,15 @@ const Home = () => {
           </div>
         </div>
       </Subsection>
+
+
       <Subsection
         subtitle="Learn More About Preventative Measures"
         className="Preventative-measures"
       >
         <p>
-          After using our tool, check out our dedicated page for preventative
-          measures to manage drought conditions effectively.
+          After using our tool, visit a collection of articles to deepen your
+          understanding of drought management and discover effective preventative measures.
         </p>
         <button
           onClick={() => window.open('https://smallfarms.oregonstate.edu/smallfarms/15-ways-help-mitigate-drought-your-farm-season-and-beyond', '_blank')}
