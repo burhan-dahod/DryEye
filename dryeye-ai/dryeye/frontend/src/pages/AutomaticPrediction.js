@@ -38,8 +38,8 @@ const AutomaticPrediction = () => {
         setPrediction(response.data.prediction);
         setError(null); // Clear any previous errors
       } catch (error) {
-        console.error("Error fetching prediction:", error);
-        setError("Failed to fetch prediction. Please try again.");
+          console.error("Error fetching prediction:", error);
+          setError("Failed to fetch prediction. Please try again.");
         setPrediction(null); // Clear previous prediction
       }
     } else {
