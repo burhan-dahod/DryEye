@@ -1,28 +1,39 @@
-/* Sidebar.css */
 .Sidebar {
+    width: 250px;
+    height: 100vh;
     background-color: #333;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.Sidebar h2 {
-    margin-top: 0;
+.Sidebar-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.Sidebar nav ul {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.Sidebar nav ul li {
-    margin: 10px 0;
+nav ul li {
+    margin: 15px 0;
 }
 
-.Sidebar nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
-.Sidebar nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    background-color: #575757;
 }

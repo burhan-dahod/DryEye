@@ -18,16 +18,67 @@ const Home = () => {
                     governments and communities prepare and respond effectively.
                 </p>
                 <button onClick={() => handleNavigate('/prediction')} className="Home-button">
-                    Get Started
+                    Try Now
                 </button>
             </div>
-            <section className="Features-section">
-                <h2>Features</h2>
-                <ul>
-                    <li>Accurate Predictions</li>
-                    <li>Real-Time Data</li>
-                    <li>User-Friendly Interface</li>
-                </ul>
+            <section className="Mission-section">
+                <h2>Our Mission</h2>
+                <p>
+                    Marginalized agricultural workers, who form the backbone of our food system, are
+                    among the most affected by climate change. These individuals often work with limited
+                    resources, making any setback, like a drought, a significant challenge to their
+                    capabilities, output, and income. Despite their crucial role, their plight is often
+                    overlooked, especially during times of difficulty.
+                </p>
+                <p>
+                    To address this issue, we developed DryEye AI. Our tool predicts and analyzes drought
+                    periods using historical data to provide accurate forecasts. It can predict the onset
+                    and duration of droughts, and our computer vision model can help detect early signs
+                    of droughts in your area.
+                </p>
+                <p>
+                    This initiative aims to bring attention to these critical issues and support farmers in
+                    conducting climate smart agriculture, which helps reduce the impact of such incidents.
+                </p>
+                <p>
+                    Climate smart agriculture involves practices that increase productivity while
+                    reducing greenhouse gas emissions and enhancing resilience to climate change. DryEye AI
+                    contributes by offering insights that help farmers make informed decisions to mitigate
+                    the effects of drought.
+                </p>
+            </section>
+            <section className="Prediction-section">
+                <h2>Drought Prediction</h2>
+                <div className="Prediction-options">
+                    <div className="Prediction-option">
+                        <h3>Manual Prediction</h3>
+                        <p>
+                            Enter specific parameters to manually predict drought conditions in your area.
+                        </p>
+                        <button onClick={() => handleNavigate('/manual-prediction')} className="Home-button">
+                            Manual Prediction
+                        </button>
+                    </div>
+                    <div className="Prediction-option">
+                        <h3>Automatic Prediction</h3>
+                        <p>
+                            Use automated tools to predict drought based on real-time data and analysis.
+                        </p>
+                        <button onClick={() => handleNavigate('/automatic-prediction')} className="Home-button">
+                            Automatic Prediction
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section className="Preventative-measures-section">
+                <h2>Learn More About Preventative Measures</h2>
+                <p>
+                    After using our tool, check out our dedicated page for preventative measures to
+                    manage drought conditions effectively.
+                </p>
+                <button onClick={() => handleNavigate('/preventative-measures')} className="Home-button">
+                    Explore Preventative Measures
+                </button>
             </section>
         </div>
     );

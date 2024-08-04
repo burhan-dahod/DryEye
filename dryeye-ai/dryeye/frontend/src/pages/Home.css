@@ -1,39 +1,95 @@
 .Home {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 .Hero-section {
-  margin: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .Home-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
+  background-color: #4CAF50;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.5em;
   cursor: pointer;
-  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .Home-button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
-.Features-section {
-  margin: 20px;
-  text-align: left;
+.Mission-section {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  /* Ensure it doesn't stretch too wide */
+  width: 100%;
+  /* Make it responsive */
+  padding: 0 20px;
+  /* Add padding for better readability */
 }
 
-.Features-section ul {
-  list-style-type: none;
-  padding: 0;
+.Features-section,
+.Preventative-measures-section {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  /* Ensure it doesn't stretch too wide */
+  width: 100%;
+  /* Make it responsive */
+  padding: 0 20px;
+  /* Add padding for better readability */
 }
 
-.Features-section li {
-  background-color: #f1f1f1;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
+.Prediction-section {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  /* Increase maximum width for better display */
+  width: 100%;
+  /* Make it responsive */
+  padding: 0 20px;
+  /* Add padding for better readability */
+}
+
+.Prediction-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* Ensure items wrap on smaller screens */
+}
+
+.Prediction-option {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  /* Increase padding for better appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(50% - 20px);
+  /* Adjust width to fit two items per row */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+}
+
+.Prediction-option h3 {
+  font-size: 1.8em;
+  /* Increase font size for headings */
+  margin-bottom: 10px;
+}
+
+.Prediction-option p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  /* Slightly increase font size for better readability */
 }

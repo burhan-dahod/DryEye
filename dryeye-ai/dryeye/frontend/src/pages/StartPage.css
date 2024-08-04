@@ -1,0 +1,44 @@
+/* General styles for the splash page */
+.StartPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4CAF50; /* Green background for a fresh look */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Make sure this font is imported */
+}
+
+.StartPage-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.StartPage-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.StartPage-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.StartPage-button {
+    background-color: #ffffff; /* White button for contrast */
+    color: #4CAF50; /* Match button color with background */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.StartPage-button:hover {
+    background-color: #f1f1f1; /* Lighten button color on hover */
+    transform: scale(1.05);
+}

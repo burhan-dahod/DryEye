@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .App {
+  font-family: 'Roboto', sans-serif;
+
   display: flex;
   min-height: 100vh;
 }
 
 .App-content {
   margin-left: 250px;
-  /* Width of the sidebar */
   padding: 20px;
   flex: 1;
-  /* Take the remaining space */
 }
 
 .App-content main {
