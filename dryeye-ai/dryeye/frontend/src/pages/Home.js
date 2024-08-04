@@ -61,13 +61,9 @@ const Home = () => {
           <div className="Prediction-option">
             <h3>Manual Prediction</h3>
             <p>
-              Enter specific parameters to manually predict drought conditions
-              in your area.
+              Enter specific parameters to manually predict drought conditions in your area.
             </p>
-            <button
-              onClick={() => handleNavigate("/manual-prediction")}
-              className="Home-button"
-            >
+            <button onClick={() => handleNavigate('/manual')} className="Home-button">
               Manual Prediction
             </button>
           </div>

@@ -6,6 +6,7 @@ import Home from "./Home";
 import Prediction from "./Prediction";
 import Dashboard from "./Dashboard";
 import AutomaticPrediction from "./AutomaticPrediction";
+import ManualPage from './ManualPage';
 
 import "./App.css";
 
@@ -23,6 +24,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/prediction" element={<Prediction />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/manual" element={<ManualPage />} /> {/* Add route for ManualPage */}
+
             <Route
               path="/automatic-prediction"
               element={<AutomaticPrediction></AutomaticPrediction>}
