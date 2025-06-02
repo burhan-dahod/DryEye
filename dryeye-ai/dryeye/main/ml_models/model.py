@@ -2,15 +2,19 @@ import joblib
 import numpy as np
 import pandas as pd
 import json
+import os
 from datetime import datetime
 
-MODEL_PATH_CLASS = 'C:/Users/Mohamed/Dropbox/My PC (DESKTOP-NDCHUDD)/Desktop/Drought-Detector/dryeye-ai/dryeye/main/ml_models/models/drought_rf_class_model.joblib'
-rf_class = joblib.load(MODEL_PATH_CLASS)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH_REG = 'C:/Users/Mohamed/Dropbox/My PC (DESKTOP-NDCHUDD)/Desktop/Drought-Detector/dryeye-ai/dryeye/main/ml_models/models/drought_rf_reg_model.joblib'
+MODEL_PATH_CLASS = os.path.join(BASE_DIR, 'models', 'drought_rf_class_model.joblib')
+MODEL_PATH_REG = os.path.join(BASE_DIR, 'models', 'drought_rf_reg_model.joblib')
+DATA_PATH = os.path.join(BASE_DIR, 'dra_export_257040.csv')
+
+rf_class = joblib.load(MODEL_PATH_CLASS)
 rf_reg = joblib.load(MODEL_PATH_REG)
 
-DATA_PATH = 'C:/Users/Mohamed/Dropbox/My PC (DESKTOP-NDCHUDD)/Desktop/Drought-Detector/dryeye-ai/dryeye/main/ml_models/dra_export_257040.csv'
+# Load CSV and parse dates
 df = pd.read_csv(DATA_PATH)
 df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y %I:%M:%S %p')
 
