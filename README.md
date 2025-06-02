@@ -1,45 +1,51 @@
-```## Available Scripts
+# DryEye AI 👁️‍🗨️
 
-In the project directory, you can run:
-
-### `npm run build`
-Run under the frontend folder
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-### `python manage.py runserver`
-Run under the dryeye folder
-Kickstarts the backend server 
-
-### DryEye AI Project Summary
-
-**Objective:**
-To forecast and detect drought conditions accurately and provide actionable insights and preventative measures to mitigate drought impact, particularly in minority and low socioeconomic communities.
-
-**About:**
+## Overview 📝
 DryEye AI is an advanced tool designed to predict and detect drought conditions. It leverages a combination of regression and classifier models, alongside a computer vision (CV) classification model integrated with Roboflow. The tool analyzes images to predict the likelihood of future droughts and employs an OpenCV model to track and interpret official heatmaps of weather conditions sourced from NASA.
 
-**Motivation:**
-The primary motivation behind DryEye AI is to assist minority and low socioeconomic communities that are disproportionately affected by drought conditions. By providing early warnings and actionable insights, DryEye AI aims to enhance preparedness and resilience in these vulnerable populations.
+![DryEye Banner](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/976/146/datas/gallery.jpg)
 
-**What it Does:**
-- **Forecasts Droughts:** Uses a regression model to predict drought conditions based on historical and current weather data.
-- **Detects Drought Conditions:** Employs a classifier model to identify drought conditions in real-time.
-- **Image Analysis:** Integrates a CV classification model with Roboflow to analyze images and predict future droughts.
-- **Heatmap Tracking:** Utilizes an OpenCV model to interpret and track official weather condition heatmaps from NASA.
-- **Awareness and Prevention:** Provides information on best practices and preventative measures to help communities avoid or mitigate drought conditions.
+## Features ⭐
+- **Drought Prediction:** Uses Random Forest models to classify and regress drought levels from climate data.
+- **Computer Vision Analysis:** Analyzes drought images to detect signs of drought.
+- **API and Web Interface:** Built on Django REST framework with CORS support for easy integration.
+- **Data Handling:** Utilizes pandas and numpy for data processing.
 
-**How We Built It:**
-- **Data Collection:** Gathered historical weather data and official heatmaps from NASA.
-- **Model Development:** Developed and trained regression and classifier models to forecast and detect drought conditions.
-- **Computer Vision Integration:** Integrated a CV classification model using Roboflow to analyze images.
-- **OpenCV Implementation:** Designed an OpenCV model to track and interpret heatmaps.
-- **User Interface:** Created a user-friendly interface to display predictions and provide actionable insights.
+## Installation ⚙️
 
-**Impact:**
-DryEye AI aims to make a significant positive impact by:
-- **Enhancing Preparedness:** Providing early warnings to help communities prepare for drought conditions.
-- **Reducing Vulnerability:** Offering insights and preventative measures to reduce the impact of droughts on minority and low socioeconomic communities.
-- **Promoting Awareness:** Raising awareness about drought conditions and encouraging the adoption of best practices to mitigate their effects.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/burhan-dahod/DryEye.git
+   cd .\DryEye\dryeye-ai\dryeye\
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Build the frontend:
+   ```bash
+   npm run build
+4. Run the Django server:
+   ```bash
+   python manage.py runserver
+5. Open the server:
+   ```bash
+   Open http://127.0.0.1:8000/ and view it in the browser.
+## Technologies 🚀
 
-Through these efforts, DryEye AI seeks to build resilience and improve the quality of life in communities most affected by drought conditions.```
+[![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white&style=for-the-badge)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.2.1-092E20?logo=django&logoColor=white&style=for-the-badge)](https://www.djangoproject.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-F7931E?logo=scikitlearn&logoColor=white&style=for-the-badge)](https://scikit-learn.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.11.0-5C3EE8?logo=opencv&logoColor=white&style=for-the-badge)](https://opencv.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.2.3-150458?logo=pandas&logoColor=white&style=for-the-badge)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy&logoColor=white&style=for-the-badge)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.3-11557C?logo=matplotlib&logoColor=white&style=for-the-badge)](https://matplotlib.org/)
+[![Django REST Framework](https://img.shields.io/badge/DRF-3.16.0-1C3D5A?logo=django&logoColor=white&style=for-the-badge)](https://www.django-rest-framework.org/)
+
+## Credits 📄
+
+Thanks to the following contributors:
+
+- [Ammar Hakim](https://github.com/ammxr)
+- [Mohamed Eltaib](https://github.com/RyzenStudios) 
+- [Karishvan Ragunathan](https://github.com/Karishvan)   
+- [Burhanuddin Dahodwala](https://github.com/burhan-dahod) 
+
